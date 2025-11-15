@@ -18,16 +18,27 @@ El objetivo de este backend es permitir la consulta de datos de becarios del pro
 ## 📁 Estructura del proyecto
 
 backend/
-│── becarios/                # App principal
-│   ├── models.py            # Modelos
-│   ├── serializers.py       # Serializadores
-│   ├── views.py             # Vistas / API
-│   └── urls.py
+├── becarios/ # 📌 App principal del proyecto (lógica del backend)
+│ ├── pycache/ # Archivos compilados automáticamente por Python
+│ ├── migrations/ # Migraciones de la base de datos
+│ ├── init.py # Indica que es un paquete de Python
+│ ├── admin.py # Configuración del panel de administración
+│ ├── apps.py # Configuración de la app 'becarios'
+│ ├── models.py # Modelos ORM (representan tablas)
+│ ├── serializers.py # Serializadores para API REST
+│ ├── tests.py # Tests automatizados
+│ └── views.py # Vistas / Endpoints de la API
 │
-│── consulta_becarios/       # Proyecto Django
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
+├── consulta_becarios/ # 📌 Proyecto Django principal
+│ ├── pycache/
+│ ├── init.py
+│ ├── asgi.py # Configuración para servidores ASGI
+│ ├── settings.py # Configuración global del proyecto
+│ ├── urls.py # Rutas principales del proyecto
+│ └── wsgi.py # Configuración para servidores WSGI
 │
-│── becal_sqlite.db          # Base de datos
-│── manage.py
+├── venv/ # Entorno virtual de Python
+│
+├── becal_sqlite.db # Base de datos SQLite utilizada
+│
+└── manage.py # Script principal para ejecutar comandos Django
